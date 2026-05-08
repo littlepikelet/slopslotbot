@@ -1,3 +1,4 @@
+# FIX: updated imports for aiogram 3.x
 import asyncio
 import os
 from datetime import datetime
