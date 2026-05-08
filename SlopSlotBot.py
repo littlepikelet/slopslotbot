@@ -1,4 +1,3 @@
-# FIX: updated imports for aiogram 3.x
 import asyncio
 import os
 from datetime import datetime
@@ -14,7 +13,7 @@ from aiogram.exceptions import TelegramBadRequest
 import aiosqlite
 
 #  КОНФИГ 
-BOT_TOKEN = "8635076570:AAEX117e8gOj8z5Eh97TXPmaF-APOmBeamQ"
+BOT_TOKEN = os.getenv("8635076570:AAEX117e8gOj8z5Eh97TXPmaF-APOmBeamQ")
 TIMEZONE = pytz.timezone("Asia/Yekaterinburg")  # Уфимское время
 FREE_ATTEMPTS_DAILY = 3          # бесплатных попыток в день
 DAILY_BONUS = 3                  # сколько начисляется фишек каждый день
