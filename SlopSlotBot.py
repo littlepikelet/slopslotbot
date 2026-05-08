@@ -13,7 +13,7 @@ from aiogram.exceptions import TelegramBadRequest
 import aiosqlite
 
 #  КОНФИГ 
-BOT_TOKEN = "8635076570:AAFxSCshWV4sjXBr9miQlsjCcSIdNczF4Rk"
+BOT_TOKEN = "8635076570:AAEX117e8gOj8z5Eh97TXPmaF-APOmBeamQ"
 TIMEZONE = pytz.timezone("Asia/Yekaterinburg")  # Уфимское время
 FREE_ATTEMPTS_DAILY = 3          # бесплатных попыток в день
 DAILY_BONUS = 3                  # сколько начисляется фишек каждый день
@@ -302,7 +302,7 @@ async def remove_manual_slot(message: types.Message):
 async def main():
     await init_db()
     print("Бот запущен")
-    await dp.start_polling(bot)
+    await dp.start_polling(bot, allowed_updates=["message", "callback_query"])
 
 if __name__ == "__main__":
     asyncio.run(main())
